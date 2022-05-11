@@ -1,0 +1,24 @@
+package com.jcdeau.kata.tennis.scoreboard.scoreboard.Mocks;
+
+import com.jcdeau.kata.tennis.scoreboard.scoreboard.Game;
+import com.jcdeau.kata.tennis.scoreboard.scoreboard.Player;
+import com.jcdeau.kata.tennis.scoreboard.scoreboard.ScoreEvaluator;
+
+public class GameMock implements Game {
+    boolean isGameWon;
+    int rounds;
+
+    @Override
+    public boolean isGameWon(ScoreEvaluator evaluator, int playerOnePoints, int playerTwoPoints) {
+        return isGameWon;
+    }
+
+    @Override
+    public void playRound(Player one, Player two) {
+        rounds++;
+    }
+
+    public void setGameWon(boolean gameWon) {
+        isGameWon = gameWon;
+    }
+}
